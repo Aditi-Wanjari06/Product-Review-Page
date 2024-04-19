@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Page</title>
+    <style>
+        body{
+            background-color: rgb(222, 218, 218);
+        }
+
+    h2{
+        font-size: 40px;
+        text-align: center;
+        
+    }
+        
+        #main-product-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            border: 1px solid black;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+            display: block;
+            margin: 20px auto;
+        }
+
+        .product-images-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        .product-image {
+            height: 70px;
+            width: 70px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <u><h2>Samsung A54 5G</h2></u>
+    <img src="1.jpg" alt="Samsung A54 5G" id="main-product-image">
+
+    <div class="product-images-container">
+        <img src="1.jpg" alt="" class="product-image" onclick="changeImage('1.jpg')">
+        <img src="2.jpg" alt="" class="product-image" onclick="changeImage('2.jpg')">
+        <img src="3.jpg" alt="" class="product-image" onclick="changeImage('3.jpg')">
+        <img src="4.jpg" alt="" class="product-image" onclick="changeImage('4.jpg')">
+        <img src="5.jpg" alt="" class="product-image" onclick="changeImage('5.jpg')">
+
+    </div>
+
+    <script>
+        function changeImage(imageName) {
+            const mainImage = document.getElementById('main-product-image');
+            mainImage.src = imageName;
+        }
+        
+    </script>
+
+</body>
+
+</html>
